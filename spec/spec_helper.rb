@@ -6,6 +6,7 @@ end
 
 require 'rspec/given'
 require 'pry'
+require 'pathname'
 require 'i18n_multitenant'
 
 RSpec.configure do |config|
@@ -16,4 +17,10 @@ end
 # Load Support files
 Dir['./spec/support/**/*.rb'].each do |f|
   require f
+end
+
+module Rails
+  def self.root
+    Pathname.new('spec/support')
+  end
 end

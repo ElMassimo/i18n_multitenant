@@ -1,0 +1,4 @@
+es-FREE:
+  devise:
+    failure:
+      already_authenticated: 'Ya iniciaste sesión.'

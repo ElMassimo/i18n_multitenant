@@ -1,0 +1,5 @@
+es-ENTERPRISE:
+  simple_form:
+    labels:
+      user:
+        name: 'Nombre y Apellido'

@@ -1,0 +1,4 @@
+es:
+  devise:
+    failure:
+      already_authenticated: 'Ya has iniciado sesión.'

@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     i18n_multitenant (0.0.1)
-      i18n
+      i18n (>= 0.7)
 
 GEM
   remote: http://rubygems.org/

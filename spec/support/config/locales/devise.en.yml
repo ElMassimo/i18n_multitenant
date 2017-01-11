@@ -1,0 +1,4 @@
+en:
+  devise:
+    failure:
+      already_authenticated: 'You are already signed in.'
