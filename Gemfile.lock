@@ -1,0 +1,68 @@
+PATH
+  remote: .
+  specs:
+    i18n_multitenant (0.0.1)
+      i18n
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    codeclimate-test-reporter (1.0.4)
+      simplecov
+    coderay (1.1.1)
+    diff-lcs (1.2.5)
+    docile (1.1.5)
+    given_core (3.8.0)
+      sorcerer (>= 0.3.7)
+    i18n (0.7.0)
+    json (2.0.2)
+    method_source (0.8.2)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rake (12.0.0)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-given (3.8.0)
+      given_core (= 3.8.0)
+      rspec (>= 2.14.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    simplecov (0.12.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
+    slop (3.6.0)
+    sorcerer (1.0.2)
+    tomparse (0.4.2)
+    yard (0.9.7)
+    yard-tomdoc (0.7.1)
+      tomparse (>= 0.4.0)
+      yard
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  codeclimate-test-reporter
+  i18n_multitenant!
+  pry
+  rake
+  rspec-given
+  yard
+  yard-tomdoc
+
+BUNDLED WITH
+   1.12.5
