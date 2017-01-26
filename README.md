@@ -13,6 +13,11 @@ tenant-specific translations in multi-tenant apps.
 ## Setting the locale
 ```ruby
 I18nMultitenant.set(locale: :en, tenant: 'Tenant Name')
+
+# Or:
+I18nMultitenant.with_locale(locale: :en, tenant: 'Tenant Name') do
+...
+end
 ```
 
 ## Locale files
