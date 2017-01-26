@@ -1,11 +1,11 @@
 PATH
   remote: .
   specs:
-    i18n_multitenant (0.0.1)
+    i18n_multitenant (0.0.2)
       i18n (>= 0.7)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     codeclimate-test-reporter (1.0.4)
       simplecov

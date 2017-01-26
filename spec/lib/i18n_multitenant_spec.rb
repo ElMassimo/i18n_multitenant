@@ -11,6 +11,11 @@ RSpec.describe I18nMultitenant do
   }
 
   describe 'set' do
+    context 'passing an incorrect option' do
+      When(:result) { I18nMultitenant.set(locales: [:en, :es]) }
+      Then { expect(result).to have_failed(ArgumentError, /unknown keyword: locales/) }
+    end
+
     context 'setting only the locale' do
       When(:result) { I18nMultitenant.set(locale: locale) }
 
@@ -75,6 +80,22 @@ RSpec.describe I18nMultitenant do
         Given(:tenant) { 'Enterprise' }
         Then { expect(result).to have_failed(I18n::InvalidLocale, /"en-US-ENTERPRISE" is not a valid locale/) }
       end
+    end
+  end
+
+  describe 'with_locale' do
+    context 'is restored afterwards' do
+      Given {
+        I18n.locale = :en
+      }
+      When(:result) {
+        I18nMultitenant.with_locale(locale: :es, tenant: 'Free') {
+          t(:app_name)
+        }
+      }
+      Then { result == 'I18n (versión gratuita)' }
+      And  { I18n.locale == :en }
+      And  { t(:app_name) == 'I18n' }
     end
   end
 

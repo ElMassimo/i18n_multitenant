@@ -1,4 +1,11 @@
-# i18n Multi-Tenant
+i18n Multi-Tenant
+====================
+
+[![Gem Version](https://badge.fury.io/rb/i18n_multitenant.svg)](http://badge.fury.io/rb/i18n_multitenant)
+[![Build Status](https://travis-ci.org/ElMassimo/i18n_multitenant.svg)](https://travis-ci.org/ElMassimo/i18n_multitenant)
+[![Test Coverage](https://codeclimate.com/github/ElMassimo/i18n_multitenant/badges/coverage.svg)](https://codeclimate.com/github/ElMassimo/i18n_multitenant/coverage)
+[![Code Climate](https://codeclimate.com/github/ElMassimo/i18n_multitenant/badges/gpa.svg)](https://codeclimate.com/github/ElMassimo/i18n_multitenant)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ElMassimo/i18n_multitenant/blob/master/LICENSE.txt)
 
 This gem is a small utility that provides the basic configuration to perform
 tenant-specific translations in multi-tenant apps.
@@ -57,3 +64,14 @@ the configuration yourself in other applications by calling:
 ```ruby
 I18nMultitenant.configure(I18n) # or pass I18n.config
 ```
+
+## Front-end Translations
+If you also need to perform translations in the front-end, you can use a library
+like [`i18n-js`](https://github.com/fnando/i18n-js). You can easily configure
+`i18n-js` to support multi-tenant translations by leveraging `i18n` itself:
+
+```erb
+I18n.locale = <%= I18n.locale.to_json.html_safe %>;
+I18n.locales[I18n.locale] = <%= I18n.fallbacks[I18n.locale].to_json.html_safe %>
+```
+

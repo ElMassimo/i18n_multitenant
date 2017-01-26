@@ -1,3 +1,3 @@
 module I18nMultitenant
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
 end
