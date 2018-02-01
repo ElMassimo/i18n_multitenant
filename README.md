@@ -52,7 +52,7 @@ you will need to sanitize the names yourself before handing them over to `set`.
 Add this line to your application's Gemfile and run `bundle install`:
 
 ```ruby
-  gem 'i18n_multitenant'
+gem 'i18n_multitenant'
 ```
 
 Or install it yourself running:
