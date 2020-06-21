@@ -10,6 +10,8 @@ i18n Multi-Tenant
 This gem is a small utility that provides the basic configuration to perform
 tenant-specific translations in multi-tenant apps.
 
+Read more about it in the [blog announcement](https://maximomussini.com/posts/i18n-multitenant/).
+
 ## Setting the locale
 ```ruby
 I18nMultitenant.set(locale: :en, tenant: 'Tenant Name')
