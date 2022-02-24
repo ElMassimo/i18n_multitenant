@@ -21,13 +21,13 @@ module I18nMultitenant
   #   I18nMultitenant.set(locale: :es)
   #   => :es
   def self.set(options)
-    I18n.locale = locale_for(options)
+    I18n.locale = locale_for(**options)
   end
 
   # Public: Executes block using the specified locale configuration, restoring
   # it after the block is executed.
   def self.with_locale(options)
-    I18n.with_locale(locale_for(options)) { yield }
+    I18n.with_locale(locale_for(**options)) { yield }
   end
 
   # Internal: Get the internal locale for a tenant-specific locale.
