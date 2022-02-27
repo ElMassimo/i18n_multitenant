@@ -5,6 +5,11 @@ SimpleCov.start {
   add_filter '/spec/'
 }
 
+if ENV['CI']
+  require 'simplecov_json_formatter'
+  SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
+end
+
 require 'rspec/given'
 require 'pry-byebug'
 require 'pathname'
