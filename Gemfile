@@ -6,12 +6,6 @@ gem 'rake'
 gem 'bundler'
 
 group :test do
-  gem 'pry'
+  gem 'pry-byebug'
   gem 'rspec-given'
-  gem 'codeclimate-test-reporter', require: nil
-end
-
-group :doc do
-  gem 'yard'
-  gem 'yard-tomdoc'
 end
