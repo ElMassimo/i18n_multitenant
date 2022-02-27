@@ -12,17 +12,31 @@ tenant-specific translations in multi-tenant apps.
 
 Read more about it in the [blog announcement](https://maximomussini.com/posts/i18n-multitenant/).
 
-## Setting the locale
+## Setting the locale 🌎
+
+You can set a locale globally using:
+
 ```ruby
 I18nMultitenant.set(locale: :en, tenant: 'Tenant Name')
+```
 
-# Or:
+It's usually preferable to set a locale locally by scoping the change to a block: 
+
+```ruby
 I18nMultitenant.with_locale(locale: :en, tenant: 'Tenant Name') do
-...
+  # perform translations
 end
 ```
 
-## Locale files
+For example, using an `around_action` in Rails:
+
+```ruby
+around_action do
+  I18nMultitenant.with_locale(locale: :en, tenant: 'Tenant Name') { yield }
+end
+```
+
+## Locale files 📝
 
 The library leverages the use of fallbacks, using the tenant name as a locale variant.
 
@@ -49,7 +63,7 @@ If you need to use names that are not be valid yml keys even after this process,
 you will need to sanitize the names yourself before handing them over to `set`.
 
 
-## Installation
+## Installation 💿
 
 Add this line to your application's Gemfile and run `bundle install`:
 
@@ -63,7 +77,7 @@ Or install it yourself running:
 gem install i18n_multitenant
 ```
 
-## Configuration
+## Configuration ⚙️
 
 In Rails everything should be configured out of the box, but you can perform
 the configuration yourself in other applications by calling:
@@ -81,4 +95,3 @@ like [`i18n-js`](https://github.com/fnando/i18n-js). You can easily configure
 I18n.locale = <%= I18n.locale.to_json.html_safe %>;
 I18n.locales[I18n.locale] = <%= I18n.fallbacks[I18n.locale].to_json.html_safe %>
 ```
-

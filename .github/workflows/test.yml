@@ -6,7 +6,7 @@ jobs:
   test:
     name: test
     runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ endsWith(matrix.ruby, 'head') || matrix.ruby == 'debug' || matrix.experimental }}
+    continue-on-error: ${{ endsWith(matrix.ruby, 'head') || matrix.ruby == 'debug' }}
     env:
       BUNDLE_JOBS: 4
       BUNDLE_RETRY: 3
