@@ -1,4 +1,10 @@
 # frozen_string_literal: true
+
+require 'simplecov'
+SimpleCov.start {
+  add_filter '/spec/'
+}
+
 require 'rspec/given'
 require 'pry-byebug'
 require 'pathname'
