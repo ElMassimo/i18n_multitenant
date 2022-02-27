@@ -1,11 +1,6 @@
 # frozen_string_literal: true
-require 'simplecov'
-SimpleCov.start do
-  add_filter '/spec/'
-end
-
 require 'rspec/given'
-require 'pry'
+require 'pry-byebug'
 require 'pathname'
 require 'i18n_multitenant'
 
