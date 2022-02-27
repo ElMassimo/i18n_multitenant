@@ -2,7 +2,7 @@ i18n Multi-Tenant
 ====================
 
 [![Gem Version](https://badge.fury.io/rb/i18n_multitenant.svg)](http://badge.fury.io/rb/i18n_multitenant)
-[![Build Status](https://travis-ci.org/ElMassimo/i18n_multitenant.svg)](https://travis-ci.org/ElMassimo/i18n_multitenant)
+[![Build Status](https://github.com/ElMassimo/i18n_multitenant/workflows/test/badge.svg)](https://github.com/ElMassimo/i18n_multitenant/actions)
 [![Test Coverage](https://codeclimate.com/github/ElMassimo/i18n_multitenant/badges/coverage.svg)](https://codeclimate.com/github/ElMassimo/i18n_multitenant/coverage)
 [![Code Climate](https://codeclimate.com/github/ElMassimo/i18n_multitenant/badges/gpa.svg)](https://codeclimate.com/github/ElMassimo/i18n_multitenant)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ElMassimo/i18n_multitenant/blob/master/LICENSE.txt)
